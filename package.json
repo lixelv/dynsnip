@@ -1,23 +1,40 @@
 {
-  "name": "dynsnip",
-  "displayName": "DynSnip",
-  "description": "Collection of snippets for most common dynamic data structures like stack, bst and etc.",
-  "version": "0.0.3",
-  "repository": {
-    "url": "https://github.com/lixelv/dynsnip"
-  },
-  "engines": {
-    "vscode": "^1.105.0"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "contributes": {
-    "snippets": [
-      {
-        "language": "cpp",
-        "path": "./snippets/snippets.code-snippets"
-      }
-    ]
-  }
+    "name": "dynsnip",
+    "displayName": "DynSnip",
+    "description": "Collection of snippets for most common dynamic data structures like stack, bst and etc.",
+    "version": "0.0.4",
+    "engines": {
+        "vscode": "^1.106.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "dynsnip-ts.pickSnippet",
+                "title": "Pick DynSnip"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "lint": "eslint src",
+        "test": "vscode-test"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.106.0",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "22.x",
+        "typescript-eslint": "^8.46.3",
+        "eslint": "^9.39.1",
+        "typescript": "^5.9.3",
+        "@vscode/test-cli": "^0.0.12",
+        "@vscode/test-electron": "^2.5.2"
+    }
 }

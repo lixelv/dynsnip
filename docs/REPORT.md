@@ -5,9 +5,15 @@
 
 ## 1. Introduction
 
-DynSnip is a VSCode snippet extension providing template implementations for common dynamic data structures in C++ (BST, AVL Tree, Heap, Stack, Queue, Deque).
+DynSnip is a VSCode command snippet selection extension providing template implementations for common dynamic data structures in C++ (BST, AVL Tree, Heap, Stack, Queue, Deque).
 
 **Goal:** Create a practical code snippet collection.
+
+---
+
+## 1.1. Architecture
+
+![alt text](docs/diagram.png)
 
 ---
 
@@ -18,7 +24,8 @@ Snippet extensions are declarative (no code needed):
 | Component | Purpose |
 |-----------|---------|
 | `package.json` | Extension manifest |
-| `snippets/*.json` | Snippet definitions |
+| `src/extension.ts` | Main extention code |
+| `src/snippets.ts` | Snippet definitions |
 | Contribution Points | Register snippets with VSCode |
 
 ---
@@ -31,6 +38,9 @@ Snippet extensions are declarative (no code needed):
 dynsnip/
 ├── package.json
 ├── README.md
+├── src/
+│   ├── extension.ts
+│   └── snippets.ts
 ├── snippets/
 │   └── snippets.code-snippets
 ├── docs/
@@ -65,11 +75,6 @@ dynsnip/
 }
 ```
 
-**Key fields:**
-- `contributes.snippets` - Declares snippet files
-- `language` - Target language (cpp)
-- `path` - Snippet file location
-
 ### 3.3. Snippet Format
 
 Each snippet follows this structure:
@@ -86,14 +91,14 @@ Each snippet follows this structure:
 
 ### 3.4. Implemented Data Structures
 
-| Structure | Triggers | Key Operations |
-|-----------|----------|----------------|
-| Binary Search Tree | `bst`, `binsearchtree` | insert, search, remove |
-| AVL Tree | `avltree`, `avl` | insert, search, remove, auto-balance |
-| Heap | `heap`, `minheap`, `maxheap` | insert, popRoot, peek |
-| Stack | `stack`, `stk` | push, pop, isEmpty |
-| Queue | `queue`, `que` | enqueue, dequeue |
-| Deque | `deque`, `dq` | pushBack, pushForward, popBack, popForward |
+| Structure | Key Operations |
+|-----------|----------------|
+| Binary Search Tree | insert, search, remove |
+| AVL Tree | insert, search, remove, auto-balance |
+| Heap | insert, popRoot, peek |
+| Stack | push, pop, isEmpty |
+| Queue | enqueue, dequeue |
+| Deque | pushBack, pushForward, popBack, popForward |
 
 ---
 
@@ -102,40 +107,26 @@ Each snippet follows this structure:
 ### User Workflow
 
 ```
-Type trigger (e.g., "bst")
+Press f1, select "Pick DynSnip"
         
-Visual Studio Code shows snippet
+Visual Studio Code shows list of snippets
         
-Press Tab/Enter
-        
-Code inserted with placeholders
-        
-Navigate with Tab key
+Select snippet, press enter
 ```
 
 ### Development Workflow
 
 ```
-1. Create snippet JSON definitions
+1. Create snippets in cpp
 2. Configure package.json
-3. Press F5 to test
-4. Verify in Extension Development Host
-5. Install/Publish
+3. Create extention.ts and snippets.ts
+4. Press F5 to test
+5. Install and test
 ```
 
 ---
 
-## 5. Advantages
-
-**No runtime code** - Pure JSON configuration  
-**Zero performance overhead** - Built-in VSCode feature  
-**Easy maintenance** - Update snippets without code changes  
-**Language-scoped** - Only appears in C++ files  
-**Small package size** - Efficient distribution  
-
----
-
-## 6. Conclusion
+## 5. Conclusion
 
 The project demonstrates:
 - VSCode's contribution point system for declarative extensions
@@ -143,4 +134,4 @@ The project demonstrates:
 - Practical tool for C++ development with common data structures
 
 **Repository:** https://github.com/lixelv/dynsnip  
-**Documentation:** See `DOCUMENTATION.md`
+**Documentation:** See `DOCS.md`
