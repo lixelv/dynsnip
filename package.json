@@ -2,7 +2,10 @@
   "name": "dynsnip",
   "displayName": "DynSnip",
   "description": "Collection of snippets for most common dynamic data structures like stack, bst and etc.",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "repository": {
+    "url": "https://github.com/lixelv/dynsnip"
+  },
   "engines": {
     "vscode": "^1.105.0"
   },
