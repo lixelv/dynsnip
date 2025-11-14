@@ -1,8 +1,5 @@
 # DynSnip
 
-**Author:** [Your Name + Group]  
-**Version:** 0.0.1
-
 VSCode extension with C++ snippets for common data structures. Just type a trigger word and get the full implementation.
 
 ## What's Inside
