@@ -20,11 +20,11 @@
 			"};",
 			"",
 			"template <typename T, bool (*Comp)(const T &, const T &)>",
-			"class AVL {",
+			"class AVLAbstract {",
 			"public:",
-			"  AVL() { root = nullptr; }",
+			"  AVLAbstract() { root = nullptr; }",
 			"",
-			"  ~AVL() { clear(root); }",
+			"  ~AVLAbstract() { clear(root); }",
 			"",
 			"  void insert(T val) { root = insertNode(root, val); }",
 			"  T *search(T val) { return searchNode(root, val); }",
@@ -213,7 +213,7 @@
 			"};",
 			"",
 			"template <typename T> bool lessCompare(const T &a, const T &b) { return a < b; }",
-			"template <typename T> using AVLTree = AVL<T, lessCompare<T>>;",
+			"template <typename T> using AVLTree = AVLAbstract<T, lessCompare<T>>;",
 			"",
 			"$1"
 		]

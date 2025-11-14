@@ -22,7 +22,7 @@ All templates support generic types and include methods like insert, remove, sea
 Download the `.vsix` file from releases and run:
 
 ```bash
-code --install-extension dynsnip-0.0.2.vsix
+code --install-extension dynsnip-0.0.3.vsix
 ```
 
 Or install through VSCode:
@@ -158,7 +158,7 @@ npm install -g vsce
 vsce package
 ```
 
-This creates `dynsnip-0.0.2.vsix` in the current directory.
+This creates `dynsnip-0.0.3.vsix` in the current directory.
 
 ## License
 
