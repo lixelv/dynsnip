@@ -8,10 +8,6 @@ Binary search tree is a binary tree data structure that supports searching, inse
 2. The right subtree of a node contains only nodes with keys greater than the node's key.
 3. The left and right subtree each must also be a binary search tree.
 
-### Trigger
-
-`bst` | `binsearchtree`
-
 ### Classes
 
 Snippet creates `BSTAbstract` `BST` classes and `Node` structure. `BSTAbstract` class in template gets `T` type as a template parameter and `Comp` as is `T a` less `T b` compare function, `BST` class is a wrapper for `BSTAbstract` with `Comp` defined as `[](T a, T b) { return a < b; })`.
@@ -111,10 +107,6 @@ This is same data structure as binary search tree, but with additional balancing
 
 Supports the same methods as binary search tree, but also supports autobalancing by rotations and counting heights of subtrees.
 
-### Trigger
-
-`avltree` | `avl`
-
 ### Classes
 
 Snippet creates `AVLAbstract` and `AVL` classes, same logic as for binary search tree.
@@ -177,10 +169,6 @@ A binary heap is a complete binary tree data structure that satisfies the heap p
 - Parent is at index $(i - 1) / 2$
 
 The heap supports efficient insertion and removal of the root element (min or max depending on comparator).
-
-### Trigger
-
-`heap` | `minheap` | `maxheap`
 
 ### Classes
 
@@ -316,10 +304,6 @@ minHeap.print();
 
 Abstract data structure based on LIFO (Last In First Out) principle. Supports push and pop operations. In our case stack is implemented using linked list.
 
-### Trigger
-
-`stack` | `stk`
-
 ### Classes
 One class `Stack` template gets `T` type as a template parameter. Uses `Node` structure to store elements.
 
@@ -389,10 +373,6 @@ stack.print();
 ## Queue
 
 Abstract data structure based on FIFO (First In First Out) principle. Supports enqueue and dequeue operations. In our case queue is implemented using linked list with head and tail pointers for efficient insertion and removal.
-
-### Trigger
-
-`queue` | `que`
 
 ### Classes
 
@@ -467,10 +447,6 @@ q.print();
 ## Deque
 
 Abstract data structure that allows insertion and removal from both ends. Deque (double-ended queue) supports push and pop operations at both the front and back. In our case deque is implemented using doubly-linked list with head and tail pointers.
-
-### Trigger
-
-`deque` | `dq`
 
 ### Classes
 

@@ -1,17 +1,17 @@
 # DynSnip
 
-VSCode extension with C++ snippets for common data structures. Just type a trigger word and get the full implementation.
+VSCode extension with C++ snippets for common data structures. Use command `Pick DynSnip` for quick access to list of snippets.
 
 ## What's Inside
 
 Six data structures with complete implementations:
 
-- **Binary Search Tree** - `bst`, `binsearchtree`
-- **AVL Tree** - `avltree`, `avl` 
-- **Heap** - `heap`, `minheap`, `maxheap`
-- **Stack** - `stack`, `stk`
-- **Queue** - `queue`, `que`
-- **Deque** - `deque`, `dq`
+- **Binary Search Tree**
+- **AVL Tree**
+- **Heap**
+- **Stack**
+- **Queue**
+- **Deque**
 
 All templates support generic types and include methods like insert, remove, search, print, etc.
 
@@ -44,21 +44,12 @@ Press `F5` to test in Extension Development Host.
 ## Usage
 
 1. Open a `.cpp` file
-2. Type a trigger (like `bst`)
-3. Press Tab or Enter
-4. The full implementation gets inserted
-
-Example:
-```cpp
-// Type: bst + Tab
-// Result: Complete BST implementation with all methods
-```
+2. Press `f1` and write `Pick DynSnip`
+3. Select and press `Enter`
 
 ## Data Structures
 
 ### Binary Search Tree
-
-**Triggers:** `bst`, `binsearchtree`
 
 Creates `BSTAbstract<T, Comp>` and `BST<T>` classes with:
 - `void insert(T val)`
@@ -68,13 +59,9 @@ Creates `BSTAbstract<T, Comp>` and `BST<T>` classes with:
 
 ### AVL Tree
 
-**Triggers:** `avltree`, `avl`
-
 Self-balancing BST with same methods plus automatic rotations. Guaranteed O(log n) operations.
 
 ### Heap
-
-**Triggers:** `heap`, `minheap`, `maxheap`
 
 Binary heap with array implementation:
 - `void insert(T val)`
@@ -89,8 +76,6 @@ Comes with `MinHeap<T>` and `MaxHeap<T>` type aliases.
 
 ### Stack
 
-**Triggers:** `stack`, `stk`
-
 LIFO linked list implementation:
 - `void push(T val)`
 - `T pop()`
@@ -100,8 +85,6 @@ LIFO linked list implementation:
 
 ### Queue
 
-**Triggers:** `queue`, `que`
-
 FIFO linked list with head and tail pointers:
 - `void enqueue(T data)`
 - `T dequeue()`
@@ -110,8 +93,6 @@ FIFO linked list with head and tail pointers:
 - `void print()`
 
 ### Deque
-
-**Triggers:** `deque`, `dq`
 
 Double-ended queue with doubly-linked list:
 - `void pushBack(T data)`

@@ -22,7 +22,7 @@ DynSnip is a VSCode command snippet selection extension providing template imple
 Snippet extensions are declarative (no code needed):
 
 | Component | Purpose |
-|-----------|---------|
+|-|-|
 | `package.json` | Extension manifest |
 | `src/extension.ts` | Main extention code |
 | `src/snippets.ts` | Snippet definitions |
