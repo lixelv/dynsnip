@@ -13,29 +13,6 @@ DynSnip is a VSCode snippet extension providing template implementations for com
 
 ## 2. VSCode Extension Architecture
 
-### 2.1. Core Components
-
-VSCode uses a modular architecture with three main parts:
-
-```
-┌────────────────────────────────────────────┐
-│         VSCode Main Process                │
-│  ┌──────────────┐    ┌──────────────────┐  │
-│  │ Editor Core  │◄──►│ Extension Host   │  │
-│  │              │    │   (Node.js)      │  │
-│  └──────────────┘    │  ┌────────────┐  │  │
-│                      │  │ Extensions │  │  │
-│                      │  └────────────┘  │  │
-│                      └──────────────────┘  │
-└────────────────────────────────────────────┘
-```
-
-- **Main Process** - Electron-based UI
-- **Extension Host** - Isolated Node.js process for extensions
-- **Extension API** - Communication layer
-
-### 2.2. Snippet Extensions
-
 Snippet extensions are declarative (no code needed):
 
 | Component | Purpose |
@@ -126,13 +103,13 @@ Each snippet follows this structure:
 
 ```
 Type trigger (e.g., "bst")
-        ↓
+        
 Visual Studio Code shows snippet
-        ↓
+        
 Press Tab/Enter
-        ↓
+        
 Code inserted with placeholders
-        ↓
+        
 Navigate with Tab key
 ```
 
