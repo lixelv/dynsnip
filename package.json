@@ -1,0 +1,20 @@
+{
+  "name": "dynsnip",
+  "displayName": "DynSnip",
+  "description": "Collection of snippets for most common dynamic data structures like stack, bst and etc.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cpp",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
