@@ -13,7 +13,7 @@ DynSnip is a VSCode command snippet selection extension providing template imple
 
 ## 1.1. Architecture
 
-![alt text](docs/diagram.png)
+![alt text](diagram.png)
 
 ---
 
